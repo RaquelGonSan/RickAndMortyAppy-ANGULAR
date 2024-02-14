@@ -1,0 +1,27 @@
+
+<article class="article">
+  <div class="izq">
+    <img *ngIf="url" loading="lazy" [ngSrc]="url" [alt] = "params.image"  width="600" height="600" > 
+  </div>
+
+<div class="der">
+  <h3>
+    <mat-card-title>{{params.name}}</mat-card-title>
+  </h3>
+  <div class="section">{{params.gender}} - {{params.species}}</div>
+  <div class="section">
+  <mat-icon [ngStyle]="{color: params.status === 'Alive' ? 'rgb(85, 204, 68)': 'rgb(214, 61, 46)'}" aria-hidden="false" fontIcon="circle"></mat-icon>
+  {{params.status}}
+</div>
+  <div class="section">
+    <span class="spanTitle">Last known location</span><br>
+    <span class="span">{{params.location.name}}</span>
+  </div>
+
+
+</div>
+ 
+</article>
+
+
+

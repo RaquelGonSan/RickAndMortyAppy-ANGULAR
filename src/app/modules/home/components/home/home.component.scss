@@ -1,0 +1,50 @@
+.nav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  
+  height: 80px;
+
+}
+
+.fondo{
+  background-image: url(../../../../../assets/fondo_home.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 330px;
+}
+
+.fondo h1{
+  padding-top: 10%;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 55px;
+}
+
+.container{
+  background-color: rgb(39, 43, 51) ;
+  display: table-row;
+}
+
+.tarjetas{
+  width: 90%;
+  margin: auto;
+  /*display: grid;*/
+ 
+}
+
+h1 {
+  font-weight: bold;
+  text-align: center;
+}
+
+h3{
+    margin-top: 50px;
+}
+
+hr{
+    margin-top: 50px;
+    background-color: gray;
+
+}

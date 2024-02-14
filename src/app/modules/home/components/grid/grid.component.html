@@ -1,0 +1,38 @@
+
+<div class="row">
+
+<!--
+  
+  <div class="search">
+      <input type="search" #search matInput placeholder="Buscar..."  />
+      <button type="submit" matSuffix mat-button (click)="searchPersonajes()"><mat-icon >search</mat-icon></button>
+  </div>
+  -->
+  <div class="search">
+      <mat-form-field class="fld">
+        <input type="search" class="inp" matInput placeholder="Buscar personaje..." [(ngModel)] = "params.name" (input)="searchPersonajes(params.name)"/>
+      </mat-form-field>
+    
+
+    
+  </div>
+
+
+
+  <div class="col-lg-6 col-md-6 col-sm-12" *ngFor="let pj of personajes">
+    <app-cards [params]="pj" routerLink="character-detail/{{pj.id}}"></app-cards>
+  </div>
+</div>
+
+<div class="botones">
+  <button mat-fab color="primary" (click)= 'prevPage()' [disabled]= 'page == 1'>
+      <!--material icons google-->
+      <mat-icon>chevron_left</mat-icon>
+  </button>
+  <button mat-fab color="accent" (click)= 'nextPage()' [disabled]= 'page == 43'>
+      <mat-icon>chevron_right</mat-icon>
+  </button>
+       
+
+</div>
+
